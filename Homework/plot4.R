@@ -22,7 +22,7 @@ Data <- subset(RawData, cond)
 #Making plot4 figure
 png(filename = "plot4.png", width = 480, height = 480)
 
-par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0), ps = 15)
+par(mfrow = c(2, 2), mar = c(3, 4, 2, 2), oma = c(1, 1, 1, 0), ps = 15)
 with(Data, {
   
   #Top-left
@@ -40,7 +40,7 @@ with(Data, {
   lines(Datetime, Sub_metering_3, type = 'l', col = "blue")      
   labels <- c('Sub_metering_1', 'Sub_metering_2', 'Sub_metering_3')
   cols <- c('black', 'red', 'blue')
-  legend('topright', legend = labels, col = cols, lty = 1)
+  legend('topright', legend = labels, col = cols, lty = 1, bty="n", cex = 0.9)
   
   #Bottom-right
   plot(Datetime, Global_reactive_power, type = 'l',
